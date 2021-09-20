@@ -1,0 +1,29 @@
+<div class="d-flex px-4">
+  <div class="mr-auto">
+    <p class="date">
+      Today: 5, Aug 2018
+    </p>
+  </div>
+
+  <div class="date-range mr-5">
+    <select>
+      <option>1 Jan - 1 Jun</option>
+    </select>
+  </div>
+
+  <div class="buttons">
+    <button class="btn mr-2">
+      <img class="img-fluid" src="../../assets/left_arrow.svg" alt="">
+    </button>
+    <button class="btn">
+      <img class="img-fluid" src="../../assets/right_arrow.svg" alt="">
+    </button>
+  </div>
+</div>
+
+<div class="container-fluid px-0">
+
+  <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+    style="width: 100%; height: 350px; display: block;"></highcharts-chart>
+
+</div>

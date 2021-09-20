@@ -1,0 +1,21 @@
+.btn-pill {
+  background: #27ae60;
+  border-radius: 30px;
+  padding: 9px 25px;
+}
+
+// .mat-list-item-content {
+  .active {
+    background: #1875f0;
+    opacity: 0.1;
+    color: #647787;
+  }
+
+  .active::before {
+    position: absolute;
+    left: 0%;
+    width: 20px;
+
+    background: #1875f0;
+  }
+// }

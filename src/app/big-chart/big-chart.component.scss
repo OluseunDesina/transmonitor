@@ -1,0 +1,33 @@
+.date {
+  font-family: Segoe UI;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+}
+
+select {
+  font-family: Segoe UI;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  padding-right: 40px;
+
+  color: #7f8fa4;
+  border: 1px solid #dde0e3;
+  border-radius: 4.25px;
+}
+
+.buttons {
+  button {
+    background: linear-gradient(0deg, #f2f4f7 0%, #ffffff 100%);
+    border: 1px solid #ced0da;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #CCCFD4;
+  }
+}

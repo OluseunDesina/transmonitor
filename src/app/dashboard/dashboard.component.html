@@ -1,0 +1,247 @@
+<div class="container-fluid">
+  <app-header></app-header>
+
+  <div class="main-container">
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav="matSidenav" mode="side" opened>
+        <app-sidebar></app-sidebar>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="container-fluid mt-4">
+          <div class="row">
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <p class="graph-title mb-0">
+                        Daily Transaction Volume
+                      </p>
+                      <span class="graph-value">
+                        {{2342 | number}}
+                      </span>
+                    </div>
+                    <div class="">
+                      <app-widget-card></app-widget-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <p class="graph-title mb-0">
+                        Daily Transaction Value
+                      </p>
+                      <span class="graph-value">
+                        {{4000000 | currency : "NGN" : '₦'}}
+                      </span>
+                    </div>
+                    <div class="">
+                      <app-widget-card></app-widget-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <p class="graph-title mb-0">
+                        Total Transaction Volume
+                      </p>
+                      <span class="graph-value">
+                        {{452000 | number}}
+                      </span>
+                    </div>
+                    <div class="">
+                      <app-widget-card></app-widget-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <p class="graph-title mb-0">
+                        Total Transaction Value
+                      </p>
+                      <span class="graph-value">
+                        {{4000000 | currency : "NGN" : '₦'}}
+                      </span>
+                    </div>
+                    <div class="">
+                      <app-widget-card></app-widget-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-lg-8">
+              <div class="card py-2 px-0">
+                <!-- <div class="card-body"> -->
+                  <app-big-chart></app-big-chart>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>Orders</h4>
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p>Pending Orders: <span class="text-warning">20</span></p>
+                  <p>Reconcilled Orders: <span class="text-success">80</span></p>
+                  <p>Total Orders: <span class="text-primary">100</span></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4>Payments</h4>
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p>Un-Reconcilled Payments: <span class="text-warning">20</span></p>
+                  <p>Reconcilled Payments: <span class="text-success">80</span></p>
+                  <p>Total Payments: <span class="text-primary">100</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-12">
+              <p class="table-title ml-2">Payments</p>
+            </div>
+
+            <div class="col-12 h-100">
+              <div class="d-flex justify-content-end align-items-center">
+                <div class="mr-5">
+                  Showing
+                  <span class="page-count">
+                    <mat-form-field class="col-auto" appearance="outline">
+                      <!-- <mat-label>20</mat-label> -->
+                      <mat-select [(value)]="itemsPerPage">
+                        <mat-option [value]="10">10</mat-option>
+                        <mat-option [value]="20">20</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <!-- 20 -->
+                  </span>
+                  <span>out of {{dataSource.length}} payments</span>
+                </div>
+                <!-- <div class="mr-auto">
+                  <mat-form-field class="example-full-width" appearance="legacy">
+                    <mat-label>search payments</mat-label>
+                      <mat-icon matPrefix>search</mat-icon>
+                      <input matInput placeholder="search payments" value="">
+                  </mat-form-field>
+                </div> -->
+                <div class="ml-auto">
+                  <mat-form-field appearance="outline">
+                    <mat-label>All</mat-label>
+                    <mat-select>
+                      <mat-option value="one">All</mat-option>
+                      <mat-option value="one">Reconcilled</mat-option>
+                      <mat-option value="one">Un-reconcilled</mat-option>
+                      <mat-option value="one">Settled</mat-option>
+                      <mat-option value="one">Unsettled</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="card">
+                <div *ngIf="tableLoading" class="col-auto mx-auto">
+                  <mat-spinner></mat-spinner>
+                </div>
+                <!-- <div class="card-body"> -->
+                  <div *ngIf="!tableLoading" class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Item Type</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Transaction No</th>
+                          <th scope="col">Time</th>
+                          <th scope="col">Status</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                        <tr *ngFor="let data of dataSource | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                          <th scope="row">
+                            <img class="mr-2" src="../../assets/vw_symbol.svg" alt="">
+                            <!-- <span class="bg-secondary text-white p-2 rounded-circle">VW</span> -->
+                            {{data.title}}
+                          </th>
+                          <td>$73430</td>
+                          <td>1234567890</td>
+                          <td>12:30</td>
+                          <td>
+                            <button *ngIf="data.completed===true" class="btn btn-pill btn-outline-secondary text-success">
+                              <span class="badge badge-success badge-pill mr-2 text-success" >.</span>Reconciled
+                            </button>
+                            <button *ngIf="data.completed===false" class="btn btn-pill btn-outline-secondary text-warning">
+                              <span class="badge badge-warning badge-pill mr-2 text-warning" >.</span>Pending
+                            </button>
+                          </td>
+                          <td>
+                            <img class="img-fluid" src="../../assets/down_arrow.svg" alt="">
+                          </td>
+                        </tr>
+                        <!-- <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                  </div>
+
+                  <div *ngIf="!tableLoading && dataSource.length === 0" class="card-body">
+                    <h3 class="text-center">
+                      Table is empty...
+                    </h3>
+                  </div>
+                  <!-- <p>Table</p> -->
+                <!-- </div> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+
+
+  <!-- <app-footer></app-footer> -->
+
+</div>

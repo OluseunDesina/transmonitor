@@ -1,0 +1,109 @@
+:host {
+  height: 100vh;
+}
+
+.table-title {
+  font-family: Segoe UI;
+  font-size: 36px;
+  line-height: 48px;
+  display: flex;
+  align-items: flex-end;
+
+  color: #262626;
+}
+
+.main-container {
+  height: calc(100vh - 70px);
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 260px;
+}
+
+.graph-title {
+  font-family: Segoe UI;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #787c90;
+}
+
+.graph-value {
+  font-family: Segoe UI;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #262626;
+}
+
+thead {
+  background: #eaeef0;
+}
+
+table {
+  font-family: Segoe UI;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  // display: flex;
+  // align-items: flex-end;
+
+  color: #7f8fa4;
+}
+
+.btn-pill {
+  border-radius: 30px;
+}
+
+.status-indicator {
+  width: 10px;
+  border-radius: 50%;
+  // background: #27AE60;
+}
+
+.payment-desc {
+  font-family: Segoe UI;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #262626;
+}
+
+.page-count {
+  font-family: Segoe UI;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  // display: flex;
+  // align-items: flex-end;
+
+  color: #1875f0;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
